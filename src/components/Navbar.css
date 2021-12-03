@@ -1,0 +1,34 @@
+.header {
+    width: 100%;
+    padding: 3rem 0;
+    box-shadow: 0px 0.5px 0px 0px var(--grayish-blue);
+}
+
+.header,
+.navbar,
+.navbar-menu,
+.navbar-details {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    justify-content: space-between;
+}
+
+.navbar-logo {
+    margin-right: 6rem;
+}
+
+.navbar-menu-link {
+    margin-right: 3rem;
+}
+
+.navbar-details-cart {
+    margin-right: 5rem;
+}
+
+.navbar-details-avatar {
+    width: 5rem;
+}
+

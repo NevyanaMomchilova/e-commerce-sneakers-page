@@ -1,17 +1,14 @@
 import '../css/App.css';
+import Navbar from "./Navbar";
 
 // Next step - components structure, favicon???
 
 function App() {
   return (
     <div className="App">
-		Collections
-		Men
-		Women
-		About
-		Contact
-
-		Sneaker Company
+		<Navbar />
+		
+		{/* Sneaker Company
 
 		Fall Limited Edition Sneakers
 
@@ -23,8 +20,9 @@ function App() {
 		$250.00
 
 		0
-		Add to cart
-      	<div class="attribution">
+		Add to cart */}
+		
+      	<div className="attribution">
 			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>. 
 			Coded by <a href="https://webcodebynevyana.netlify.app/" target="_blank" rel="noreferrer">Nevyana Momchilova</a>.
       	</div>
