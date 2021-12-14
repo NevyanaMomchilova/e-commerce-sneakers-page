@@ -1,0 +1,19 @@
+.product-gallery-main-image {
+    width: 45rem;
+    border-radius: 2rem;
+    margin-bottom: 3rem;
+}
+
+.product-gallery-thumbnails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.product-gallery-thumbnail {
+    width: 9rem;
+    border-radius: 1rem;
+    
+}
+

@@ -1,5 +1,7 @@
-import '../css/App.css';
+import "./App.css";
 import Navbar from "./Navbar";
+import ProductGallery from "./ProductGallery";
+import ProductInformation from "./ProductInformation";
 
 // Next step - components structure, favicon???
 
@@ -7,7 +9,12 @@ function App() {
   return (
     <div className="App">
 		<Navbar />
+		<main>
+			<ProductGallery />
+			<ProductInformation />
+		</main>
 		
+
 		{/* Sneaker Company
 
 		Fall Limited Edition Sneakers
