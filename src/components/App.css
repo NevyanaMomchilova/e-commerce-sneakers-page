@@ -34,10 +34,10 @@ body {
 }
 
 main {
-    padding: 10rem 5rem 0 5rem;
+    padding: 9rem 5rem 0 5rem;
     display: flex;
     align-items: center;
-    gap: 15rem;
+    gap: 13rem;
 }
 
 .attribution { 
