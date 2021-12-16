@@ -17,5 +17,12 @@
     
 }
 
+.product-gallery-thumbnail-active-border {
+    border: 2px solid var(--orange);
+    border-radius: 1.3rem;
+}
 
+.product-gallery-thumbnail-active {
+    opacity: 0.3;   
+}
 
