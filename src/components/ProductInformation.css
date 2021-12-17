@@ -81,17 +81,37 @@ h1 {
 }
 
 .btn-counter,
-.btn-add-to-cart {
+.btn-add-to-cart-container {
     padding: 1.4rem 1rem;
     border-radius: 1rem;
 }
 
-.btn-add-to-cart {
+.btn-add-to-cart-container {
     flex-grow: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--orange);
+    cursor: pointer;
+}
+
+.btn-add-to-cart {
     color: var(--white);
     background-color: var(--orange);
-    border: none;
     font-weight: 700;
+    border: none;
+    padding-left: 1.4rem;
+}
+
+.btn-add-to-cart-icon {
+    transform: scale(0.8);
+}
+
+.btn-add-to-cart-container:hover,
+.btn-counter-minus:hover,
+.btn-counter-plus:hover {
+    opacity: 0.6;
+    transition: all 0.2s ease-out;
 }
 
 

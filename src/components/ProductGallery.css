@@ -1,7 +1,8 @@
 .product-gallery-main-image {
     width: 45rem;
-    border-radius: 2rem;
+    border-radius: 1.6rem;
     margin-bottom: 3rem;
+    cursor: pointer;
 }
 
 .product-gallery-thumbnails {
@@ -9,6 +10,7 @@
     justify-content: center;
     align-items: center;
     gap: 3rem;
+    cursor: pointer;
 }
 
 .product-gallery-thumbnail {
@@ -22,7 +24,9 @@
     border-radius: 1.3rem;
 }
 
-.product-gallery-thumbnail-active {
-    opacity: 0.3;   
+.product-gallery-thumbnail-active,
+.product-gallery-thumbnail:hover {
+    opacity: 0.3;
+    transition: all 0.2s ease-out;
 }
 

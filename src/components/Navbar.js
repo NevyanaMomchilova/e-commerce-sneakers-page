@@ -1,7 +1,7 @@
 import { BrowserRouter, NavLink } from "react-router-dom";
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ addedProducts }) => {
     return (
         <header className="header">
             <BrowserRouter>
@@ -29,8 +29,12 @@ const Navbar = () => {
                 </nav>
                 <div className="navbar-details">
                     <div className="navbar-details-cart-container" >
-                        <div className="navbar-details-cart-bubble" ></div>
-                        <p className="navbar-details-cart-number" >3</p>
+                        {addedProducts ? 
+                            <>
+                                <div className="navbar-details-cart-bubble" ></div>
+                                <p className="navbar-details-cart-number" >{addedProducts}</p>
+                            </> 
+                        : ""}
                         <img src="./images/icon-cart.svg" alt="cart icon" className="navbar-details-cart" />
                     </div>
                     <img src="./images/image-avatar.png" alt="avatar" className="navbar-details-avatar" />
