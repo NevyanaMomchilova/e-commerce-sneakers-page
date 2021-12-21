@@ -14,7 +14,7 @@ const ProductInformation = ({ productCounter, setProductCounter, handleBtnAddToC
     }
 
     return (
-        <div>
+        <div className="product-information">
             <h2>Sneaker Company</h2>
             <h1>Fall Limited Edition Sneakers</h1>
             <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 

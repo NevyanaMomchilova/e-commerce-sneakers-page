@@ -1,13 +1,13 @@
 .header {
     width: 100%;
     padding: 3rem 0;
-    box-shadow: 0px 0.5px 0px 0px var(--grayish-blue);
+    box-shadow: 0 0.05rem 0 0 var(--grayish-blue);
 }
 
 .header,
 .navbar,
 .navbar-menu,
-.navbar-details {
+.navbar-items {
     display: flex;
     align-items: center;
 }
@@ -24,17 +24,30 @@
     margin-right: 3rem;
 }
 
-.navbar-details-cart-container {
+.navbar-items {
+    position: relative;
+}
+
+.navbar-item-cart-pop-up {
+    position: absolute;
+    top: 6rem;
+    right: 0;
+    width: 30rem;
+    height: 19rem;
+    border: 2px solid black;
+}
+
+.navbar-item-cart-icon-container {
     position: relative;
     cursor: pointer;
 }
 
-.navbar-details-cart {
+.navbar-item-cart-icon {
     margin-right: 5rem;
     width: 2.5rem;
 }
 
-.navbar-details-avatar {
+.navbar-item-avatar {
     width: 5rem;
     cursor: pointer;
     border: 0.2rem solid transparent;
@@ -42,13 +55,13 @@
 }
 
 /* Hover Effects, Active styles */
-.navbar-details-cart-container:hover,
-.navbar-details-avatar:hover {
+.navbar-item-cart-icon-container:hover,
+.navbar-item-avatar:hover {
     transform: scale(1.05);
     transition: all 0.2s ease-out;
 }
 
-.navbar-details-avatar:hover {
+.navbar-item-avatar:hover {
     border: 0.2rem solid var(--orange);
 }
 
@@ -59,7 +72,7 @@
     color: var(--very-dark-blue);
 }
 
-.navbar-details-cart-bubble {
+.navbar-item-cart-icon-bubble {
     position: absolute;
     top: -5px;
     right: 46px;
@@ -69,10 +82,14 @@
     background-color: var(--orange);
 }
 
-.navbar-details-cart-number {
+.navbar-item-cart-icon-number {
     position: absolute;
     top: -1.2rem;
     right: 5.2rem;
     font-size: 1rem;
     color: var(--white);
+}
+
+.hidden {
+    display: none;
 }
