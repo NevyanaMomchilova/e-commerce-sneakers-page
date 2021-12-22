@@ -37,22 +37,31 @@ const Navbar = ({ addedProducts }) => {
                 <div className="navbar-items">
                     {/* Cart Details */}
                     <div 
-                        className={ cartIconClicked ?"navbar-item-cart-pop-up" : "hidden"}>
-                        <h2 className="cart-pop-up-title">Cart</h2>
+                        className={ cartIconClicked ?"navbar-item-cart-pop-up" 
+                        : "hidden"}>
+                        <h4 className="cart-pop-up-title">Cart</h4>
                         <div className="cart-pop-up-details">
-                            <div className="cart-pop-up-product">
-                                <img src="./images/image-product-1-thumbnail.jpg" alt="sneakers product"  className="cart-pop-up-product-image"/>
-                                <div className="cart-pop-up-product-text">
-                                    <p>Fall Limited Edition Sneakers</p>
-                                    <p>$125.00 x {addedProducts} <b>${addedProducts * 125}.00</b></p>
-                                </div>
-                            </div>
-                        </div>
-                        <button>Checkout</button>
-                        <div className="navbar-item-cart-pop-up-details">
-
+                        {addedProducts ?
+                            <>
+                                    <div className="cart-pop-up-product">
+                                        <img src="./images/image-product-1-thumbnail.jpg" alt="sneakers product"  className="cart-pop-up-product-image"/>
+                                        <div className="cart-pop-up-product-text">
+                                            <p>Fall Limited Edition Sneakers</p>
+                                            <p>$125.00 x {addedProducts} <strong>${addedProducts * 125}.00</strong></p>
+                                        </div>
+                                        <img src="./images/icon-delete.svg" alt="delete button" className="cart-pop-up-product-delete" />
+                                    </div>
+                                
+                                <button className="btn-cart-pop-up">Checkout</button>
+                            </>
+                        :
+                            <>
+                                <h4 className="cart-pop-up-empty">Your cart is empty.</h4>
+                            </>
+                        }
                         </div>
                     </div>
+                    
 
                     {/* Cart Icon */}
                     <div

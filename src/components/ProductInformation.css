@@ -1,11 +1,11 @@
-h2 {
+.product-information-small-title {
     text-transform: uppercase;
     color: var(--orange);
     font-size: 1.2rem;
     letter-spacing: 0.15em;
 }
 
-h1 {
+.product-information-main-title {
     color: var(--very-dark-blue);
     font-size: 4.1rem;
     line-height: 4.3rem;
