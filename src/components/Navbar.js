@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BrowserRouter, NavLink } from "react-router-dom";
 import "./Navbar.css";
 
-const Navbar = ({ addedProducts }) => {
+const Navbar = ({ addedProducts, handleBtnDeleteAddedProducts }) => {
     const [cartIconClicked, setCartIconClicked] = useState(false);
 
     const handleCartIconOnClick = () => {
@@ -49,7 +49,7 @@ const Navbar = ({ addedProducts }) => {
                                             <p>Fall Limited Edition Sneakers</p>
                                             <p>$125.00 x {addedProducts} <strong>${addedProducts * 125}.00</strong></p>
                                         </div>
-                                        <img src="./images/icon-delete.svg" alt="delete button" className="cart-pop-up-product-delete" />
+                                        <img src="./images/icon-delete.svg" alt="delete button" className="cart-pop-up-product-delete" onClick={handleBtnDeleteAddedProducts} />
                                     </div>
                                 
                                 <button className="btn-cart-pop-up">Checkout</button>

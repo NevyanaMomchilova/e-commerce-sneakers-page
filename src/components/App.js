@@ -21,9 +21,16 @@ function App() {
             setProductCounter(0);
         }
     }
+
+	const handleBtnDeleteAddedProducts = () => {
+		if (addedProducts !== 0) {
+			setAddedProducts(0);
+		}
+	}
+	
   	return (
     <div className="App">
-		<Navbar addedProducts={addedProducts} />
+		<Navbar addedProducts={addedProducts} handleBtnDeleteAddedProducts={handleBtnDeleteAddedProducts} />
 		<main>
 			<ProductGallery />
 			<ProductInformation 
