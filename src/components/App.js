@@ -31,7 +31,8 @@ function App() {
 		}
 	}
 
-	// used by ProductGallery
+	// used by ProductGallery and Modal
+	const [activeImage, setActiveImage] = useState(1);
 	const [mainImageClicked, setMainImageClicked] = useState(false);
 	const handleMainImageClicked = () => {
 		setMainImageClicked(!mainImageClicked);
@@ -42,6 +43,8 @@ function App() {
 		<Navbar addedProducts={addedProducts} handleBtnDeleteAddedProducts={handleBtnDeleteAddedProducts} />
 		<main>
 			<ProductGallery
+				activeImage={activeImage}
+				setActiveImage={setActiveImage}
 				handleMainImageClicked={handleMainImageClicked}
 			/>
 			<ProductInformation 
@@ -54,7 +57,12 @@ function App() {
 			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>. 
 			Coded by <a href="https://webcodebynevyana.netlify.app/" target="_blank" rel="noreferrer">Nevyana Momchilova</a>.
       	</div>
-		{mainImageClicked && <Modal handleMainImageClicked={handleMainImageClicked} />}
+		{mainImageClicked && 
+		<Modal 
+			handleMainImageClicked={handleMainImageClicked}
+			activeImage={activeImage}
+			setActiveImage={setActiveImage}
+		/>}
     </div>
   );
 }

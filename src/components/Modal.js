@@ -1,10 +1,14 @@
 import "./Modal.css";
 import ProductGallery from "./ProductGallery";
 
-const Modal = ({handleMainImageClicked}) => {
+const Modal = ({activeImage, setActiveImage, handleMainImageClicked}) => {
     return (
         <div className="modal">
-            <ProductGallery handleMainImageClicked={handleMainImageClicked} />
+            <ProductGallery 
+                activeImage={activeImage}
+                setActiveImage={setActiveImage}
+                handleMainImageClicked={handleMainImageClicked}
+            />
         </div>
     )
 };

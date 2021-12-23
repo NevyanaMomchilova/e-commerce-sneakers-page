@@ -1,8 +1,6 @@
 import "./ProductGallery.css";
-import { useState } from "react";
 
-const ProductGallery = ({ handleMainImageClicked }) => {
-    const [activeImage, setActiveImage] = useState(1);
+const ProductGallery = ({ activeImage, setActiveImage, handleMainImageClicked }) => {
 
     return (
         <div className="product-gallery">
