@@ -1,3 +1,20 @@
+.product-gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-gallery-main-image-container {
+    position: relative;
+}
+
+.btn-modal-close,
+.btn-modal-previous-container,
+.btn-modal-next-container {
+    display: none;
+}
+
 .product-gallery-main-image {
     min-width: 20rem;
     width: 100%;
@@ -20,6 +37,11 @@
 .product-gallery-thumbnail {
     width: 100%;
     border-radius: 1rem;    
+}
+
+.product-gallery-thumbnail-border {
+    border: transparent;
+    border-radius: 1.3rem;
 }
 
 .product-gallery-thumbnail-active-border {

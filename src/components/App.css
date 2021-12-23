@@ -12,7 +12,7 @@
 
 
     /* Black color with 75% opacity for lightbox background */
-    --black75: hsl(0, 0%, 0%);
+    --black75: rgba(0, 0, 0, 0.75);
 
     /* Attribution color */
     --attribution: hsl(228, 45%, 44%); 
