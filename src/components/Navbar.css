@@ -16,6 +16,14 @@
     justify-content: space-between;
 }
 
+.navbar-hamburger {
+    display: none;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 1.6rem;
+    cursor: pointer;
+}
+
 .navbar-logo {
     margin-right: 6rem;
 }
@@ -106,8 +114,8 @@
 
 .navbar-item-cart-icon-bubble {
     position: absolute;
-    top: -5px;
-    right: 46px;
+    top: -0.5rem;
+    right: 4.6rem;
     width: 1.7rem;
     height: 1.3rem;
     border-radius: 0.6rem;
@@ -156,4 +164,55 @@
     border-bottom: 0.4rem solid var(--orange);
     padding-bottom: 4.2rem;
     color: var(--very-dark-blue);
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 900px) {
+    .header {
+        padding: 2rem 2.5rem;
+        box-shadow: none;
+    }
+
+    .navbar-hamburger {
+        display: inline-block;
+    }
+
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-item-cart-pop-up {
+        top: 5.5rem;
+        right: -1.7rem;
+        box-shadow: 0 0.4rem 0.8rem var(--grayish-blue);
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar-logo {
+        margin-right: 4rem;
+    }
+
+    .navbar-item-cart-icon {
+        margin-right: 1.6rem;
+        width: 1.8rem;
+    }
+
+    .navbar-item-cart-icon-bubble {
+        right: 1.2rem;
+        width: 1.5rem;
+        height: 1.1rem;
+    }
+    
+    .navbar-item-cart-icon-number {
+        top: -1.4rem;
+        right: 1.7rem;
+        font-size: 0.8rem;
+    }
+
+    .navbar-item-avatar {
+        width: 2.5rem;
+    }
 }

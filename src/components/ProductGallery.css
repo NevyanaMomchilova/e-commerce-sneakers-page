@@ -55,3 +55,10 @@
     transition: all 0.2s ease-out;
 }
 
+
+@media screen and (max-width: 900px) {
+    .product-gallery-main-image {
+        border-radius: 0;
+    }
+}
+

@@ -13,6 +13,7 @@ const Navbar = ({ addedProducts, handleBtnDeleteAddedProducts }) => {
         <header className="header">
             <BrowserRouter>
                 <nav className="navbar">
+                    <img src="./images/icon-menu.svg" alt="navbar hamburger" className="navbar-hamburger" />
                     <NavLink to="/" className="navbar-logo" >
                         <img src="./images/logo.svg" alt="sneakers logo" />
                     </NavLink>

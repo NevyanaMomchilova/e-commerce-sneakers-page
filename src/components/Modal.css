@@ -3,11 +3,13 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     background-color: var(--black75);
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
 }
 
 .modal .product-gallery-main-image {
@@ -59,4 +61,11 @@
 .modal .btn-modal-previous-container:hover,
 .modal .btn-modal-next-container:hover {
     stroke: var(--orange);
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 375px) {
+    .modal {
+        display: none;   
+    }
 }

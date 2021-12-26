@@ -45,6 +45,7 @@ main > * {
 }
 
 .attribution { 
+    width: 100%;
     font-size: 11px; text-align: center; 
     position: absolute;
     bottom: 1rem;
@@ -55,4 +56,33 @@ main > * {
 .attribution a { 
     color: var(--attribution); 
 }
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1000px) {
+    .App {
+        min-height: 100vh;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .App,
+    main {
+        padding: 0;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main > * {
+        width: 100%;
+    }
+
+    .attribution {
+        padding: 0 2.5rem;
+    }
+}
+
 
