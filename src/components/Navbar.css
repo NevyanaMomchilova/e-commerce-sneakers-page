@@ -28,6 +28,10 @@
     margin-right: 6rem;
 }
 
+.btn-navbar-close {
+    display: none;
+}
+
 .navbar-menu-link {
     margin-right: 3rem;
 }
@@ -179,7 +183,34 @@
     }
 
     .navbar-menu {
-        display: none;
+        /* display: none; */
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 40rem;
+        height: 100vh;
+        background-color: var(--white);
+        color: var(--very-dark-blue);
+        font-weight: 700;
+        padding: 2.5rem;
+        z-index: 1;
+    }
+
+    .btn-navbar-close {
+        display: block;
+        fill: var(--dark-grayish-blue);
+        cursor: pointer;
+        margin-bottom: 2.5rem;
+    }
+
+    .btn-navbar-close:hover {
+        fill: var(--orange);
+    }
+
+    .navbar-menu > li {
+        margin-top: 2.5rem;
     }
 
     .navbar-item-cart-pop-up {
@@ -193,6 +224,14 @@
 @media screen and (max-width: 600px) {
     .navbar-logo {
         margin-right: 4rem;
+    }
+
+    .navbar-menu {
+        width: 26rem;
+    }
+
+    .navbar-menu > li {
+        margin-top: 1.5rem;
     }
 
     .navbar-item-cart-icon {
