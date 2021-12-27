@@ -40,10 +40,6 @@ main {
     gap: 9%
 }
 
-main > * {
-    width: 50%;
-}
-
 .attribution { 
     width: 100%;
     font-size: 11px; text-align: center; 
@@ -74,10 +70,6 @@ main > * {
     main {
         flex-direction: column;
         align-items: center;
-    }
-
-    main > * {
-        width: 100%;
     }
 
     .attribution {

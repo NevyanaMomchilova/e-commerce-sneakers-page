@@ -21,50 +21,37 @@
     background-color: var(--white);
 }
 
-.modal .btn-modal-close {
-    position: absolute;
+.modal .btn-main-image-close {
     display: block;
     top: -4rem;
     right: 0;
-    fill: var(--white);
-    transform: scale(1.5);
-    cursor: pointer;
 }
 
-.modal .btn-modal-previous-container,
-.modal .btn-modal-next-container {
-    position: absolute;
+.modal .btn-main-image-previous-container,
+.modal .btn-main-image-next-container {
     top: 21.5rem;
-    background-color: var(--white);
-    border-radius: 50%;
-    width: 5.5rem;
-    height: 5.5rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    stroke: var(--very-dark-blue);
-    cursor: pointer;
 }
 
-.modal .btn-modal-previous-container {
+.modal .btn-main-image-previous-container {
     left: -2.5rem;
 }
 
-.modal .btn-modal-next-container {
+.modal .btn-main-image-next-container {
     right: -2.5rem;
 }
 
-.modal .btn-modal-close:hover {
+.modal .btn-main-image-close:hover {
     fill: var(--orange);
 }
 
-.modal .btn-modal-previous-container:hover,
-.modal .btn-modal-next-container:hover {
+.modal .btn-main-image-previous-container:hover,
+.modal .btn-main-image-next-container:hover {
     stroke: var(--orange);
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 900px) {
     .modal {
         display: none;   
     }

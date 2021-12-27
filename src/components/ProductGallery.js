@@ -11,12 +11,12 @@ const ProductGallery = ({ activeImage, setActiveImage, handleMainImageClicked })
                     className="product-gallery-main-image"
                     onClick={handleMainImageClicked}
                 />
-                {/* Close Btn - Shown on Modal */}
+                {/* Close Btn */}
                 <svg 
                     onClick={handleMainImageClicked}
-                    className="btn-modal-close"
+                    className="btn-main-image-close"
                     width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill-rule="evenodd"/></svg>
-                {/* Previous Btn - Shown on Modal */}
+                {/* Previous Btn */}
                 <div 
                     onClick={() => {
                         if (activeImage === 1) {
@@ -25,10 +25,10 @@ const ProductGallery = ({ activeImage, setActiveImage, handleMainImageClicked })
                             setActiveImage(activeImage - 1);
                         }
                     }}
-                    className="btn-modal-previous-container">
-                    <svg className="btn-modal-previous" width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+                    className="btn-main-image-previous-container">
+                    <svg className="btn-main-image-previous" width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
                 </div>
-                {/* Next Btn - Shown on Modal */}
+                {/* Next Btn */}
                 <div 
                     onClick={() => {
                         if (activeImage === 4) {
@@ -37,8 +37,8 @@ const ProductGallery = ({ activeImage, setActiveImage, handleMainImageClicked })
                             setActiveImage(activeImage + 1);
                         }
                     }}
-                    className="btn-modal-next-container">
-                    <svg className="btn-modal-next" width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+                    className="btn-main-image-next-container">
+                    <svg className="btn-main-image-next" width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
                 </div>
             </div>
             <div className="product-gallery-thumbnails">

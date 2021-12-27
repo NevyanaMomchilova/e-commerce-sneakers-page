@@ -19,13 +19,15 @@ const ProductInformation = ({ productCounter, setProductCounter, handleBtnAddToC
             <h1 className="product-information-main-title">Fall Limited Edition Sneakers</h1>
             <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
 		    durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-            <div className="price-offer">
-                <p className="price-new" >$125.00</p>
-                <p className="price-discount" >50%</p>
-            </div>
-            <div className="price-regular">
-                <p className="price-old">$250.00</p>
-                <div className="strike-through"></div>
+            <div className="price-container">
+                <div className="price-offer">
+                    <p className="price-new" >$125.00</p>
+                    <p className="price-discount" >50%</p>
+                </div>
+                <div className="price-regular">
+                    <p className="price-old">$250.00</p>
+                    <div className="strike-through"></div>
+                </div>
             </div>
             <div className="buttons-container">
                 <div className="btn-counter">
