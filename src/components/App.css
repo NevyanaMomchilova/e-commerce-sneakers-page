@@ -75,6 +75,16 @@ main {
     .attribution {
         padding: 0 2.5rem;
     }
+
+    .navbar-side-mode-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--black75);
+        z-index: 1;
+    }
 }
 
 

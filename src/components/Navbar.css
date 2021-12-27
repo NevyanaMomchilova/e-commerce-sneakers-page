@@ -182,8 +182,11 @@
         display: inline-block;
     }
 
+    .navbar-menu.closed {
+        display: none;
+    }
+
     .navbar-menu {
-        /* display: none; */
         flex-direction: column;
         align-items: flex-start;
         position: fixed;
@@ -194,8 +197,8 @@
         background-color: var(--white);
         color: var(--very-dark-blue);
         font-weight: 700;
-        padding: 2.5rem;
-        z-index: 1;
+        padding: 3.5rem 2.5rem;
+        z-index: 2;
     }
 
     .btn-navbar-close {
@@ -213,6 +216,12 @@
         margin-top: 2.5rem;
     }
 
+    .navbar-menu-link:hover,
+    .active-link {
+        border-bottom: none;
+        color: var(--orange);
+    }
+
     .navbar-item-cart-pop-up {
         top: 5.5rem;
         right: -1.7rem;
@@ -228,6 +237,7 @@
 
     .navbar-menu {
         width: 26rem;
+        padding: 2.5rem;
     }
 
     .navbar-menu > li {
@@ -258,5 +268,4 @@
 
 /* TODO
 - navbar hamburger and side menu
-- add arrows at 900px to main image
 */

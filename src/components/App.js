@@ -25,6 +25,12 @@ function App() {
     }
 
 	// used by Navbar
+	const [navbarSideMode, setNavbarSideMode] = useState(false);
+
+	const handleBtnNavbarCloseOnClick = () => {
+        setNavbarSideMode(!navbarSideMode);
+    };
+
 	const handleBtnDeleteAddedProducts = () => {
 		if (addedProducts !== 0) {
 			setAddedProducts(0);
@@ -40,7 +46,12 @@ function App() {
 	
   	return (
     <div className="App">
-		<Navbar addedProducts={addedProducts} handleBtnDeleteAddedProducts={handleBtnDeleteAddedProducts} />
+		<Navbar 
+			navbarSideMode={navbarSideMode}
+			handleBtnNavbarCloseOnClick={handleBtnNavbarCloseOnClick}
+			addedProducts={addedProducts} 
+			handleBtnDeleteAddedProducts={handleBtnDeleteAddedProducts} 
+		/>
 		<main>
 			<ProductGallery
 				activeImage={activeImage}
@@ -63,6 +74,7 @@ function App() {
 			activeImage={activeImage}
 			setActiveImage={setActiveImage}
 		/>}
+		<div className={navbarSideMode ? "navbar-side-mode-background" : "hidden"}></div>
     </div>
   );
 }

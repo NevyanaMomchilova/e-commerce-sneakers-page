@@ -2,9 +2,9 @@ import { useState } from "react";
 import { BrowserRouter, NavLink } from "react-router-dom";
 import "./Navbar.css";
 
-const Navbar = ({ addedProducts, handleBtnDeleteAddedProducts }) => {
+const Navbar = ({ navbarSideMode, handleBtnNavbarCloseOnClick, addedProducts, handleBtnDeleteAddedProducts }) => {
     const [cartIconClicked, setCartIconClicked] = useState(false);
-
+    
     const handleCartIconOnClick = () => {
         setCartIconClicked(!cartIconClicked);
     };
@@ -13,14 +13,18 @@ const Navbar = ({ addedProducts, handleBtnDeleteAddedProducts }) => {
         <header className="header">
             <BrowserRouter>
                 <nav className="navbar">
-                    <img src="./images/icon-menu.svg" alt="navbar hamburger" className="navbar-hamburger" />
+                    <img 
+                        src="./images/icon-menu.svg" 
+                        alt="navbar hamburger" 
+                        className="navbar-hamburger"
+                        onClick={handleBtnNavbarCloseOnClick} />
                     <NavLink to="/" className="navbar-logo" >
                         <img src="./images/logo.svg" alt="sneakers logo" />
                     </NavLink>
-                    <ul className="navbar-menu">
+                    <ul className={navbarSideMode ? "navbar-menu" : "navbar-menu closed"}>
                         {/* Close Btn */}
                         <svg 
-                            // onClick={handleMainImageClicked}
+                            onClick={handleBtnNavbarCloseOnClick}
                             className="btn-navbar-close"
                             width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill-rule="evenodd"/></svg>
                         <li>
@@ -43,7 +47,7 @@ const Navbar = ({ addedProducts, handleBtnDeleteAddedProducts }) => {
                 <div className="navbar-items">
                     {/* Cart Details */}
                     <div 
-                        className={ cartIconClicked ?"navbar-item-cart-pop-up" 
+                        className={ cartIconClicked ? "navbar-item-cart-pop-up" 
                         : "hidden"}>
                         <h4 className="cart-pop-up-title">Cart</h4>
                         <div className="cart-pop-up-details">
