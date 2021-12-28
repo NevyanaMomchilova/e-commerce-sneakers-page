@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = ({ navbarSideMode, handleBtnNavbarCloseOnClick, addedProducts, handleBtnDeleteAddedProducts }) => {
