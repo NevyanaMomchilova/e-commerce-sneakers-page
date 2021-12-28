@@ -99,10 +99,12 @@ function App() {
 						</Route>
 					</Switch>
 				</main>
-				<div className="attribution">
-					Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>. 
-					Coded by <a href="https://webcodebynevyana.netlify.app/" target="_blank" rel="noreferrer">Nevyana Momchilova</a>.
-				</div>
+				<footer>
+					<div className="attribution">
+						Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>. 
+						Coded by <a href="https://webcodebynevyana.netlify.app/" target="_blank" rel="noreferrer">Nevyana Momchilova</a>.
+					</div>
+				</footer>
 				{mainImageClicked && 
 				<Modal 
 					handleMainImageClicked={handleMainImageClicked}
