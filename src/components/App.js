@@ -1,9 +1,12 @@
 import "./App.css";
 import { useState } from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navbar from "./Navbar";
 import ProductGallery from "./ProductGallery";
 import ProductInformation from "./ProductInformation";
 import Modal from "./Modal";
+import ComingSoon from "./ComingSoon";
+import NotFound from "./NotFound";
 
 // Next step - components structure, favicon???
 
@@ -45,38 +48,71 @@ function App() {
 	}
 	
   	return (
-    <div className="App">
-		<Navbar 
-			navbarSideMode={navbarSideMode}
-			handleBtnNavbarCloseOnClick={handleBtnNavbarCloseOnClick}
-			addedProducts={addedProducts} 
-			handleBtnDeleteAddedProducts={handleBtnDeleteAddedProducts} 
-		/>
-		<main>
-			<ProductGallery
-				activeImage={activeImage}
-				setActiveImage={setActiveImage}
-				handleMainImageClicked={handleMainImageClicked}
-			/>
-			<ProductInformation 
-				productCounter={productCounter}
-				setProductCounter={setProductCounter}
-				handleBtnAddToCart={handleBtnAddToCart}
-			 />
-		</main>
-      	<div className="attribution">
-			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>. 
-			Coded by <a href="https://webcodebynevyana.netlify.app/" target="_blank" rel="noreferrer">Nevyana Momchilova</a>.
-      	</div>
-		{mainImageClicked && 
-		<Modal 
-			handleMainImageClicked={handleMainImageClicked}
-			activeImage={activeImage}
-			setActiveImage={setActiveImage}
-		/>}
-		<div className={navbarSideMode ? "navbar-side-mode-background" : "hidden"}></div>
-    </div>
-  );
+		<BrowserRouter>
+			<div className="App">
+				<Navbar 
+					navbarSideMode={navbarSideMode}
+					handleBtnNavbarCloseOnClick={handleBtnNavbarCloseOnClick}
+					addedProducts={addedProducts} 
+					handleBtnDeleteAddedProducts={handleBtnDeleteAddedProducts} 
+				/>
+				<main>
+					<Switch>
+						<Route exact path="/">
+							<ProductGallery
+								activeImage={activeImage}
+								setActiveImage={setActiveImage}
+								handleMainImageClicked={handleMainImageClicked}
+							/>
+							<ProductInformation 
+								productCounter={productCounter}
+								setProductCounter={setProductCounter}
+								handleBtnAddToCart={handleBtnAddToCart}
+							/>
+						</Route>
+						<Route path="/collections">
+							<ProductGallery
+								activeImage={activeImage}
+								setActiveImage={setActiveImage}
+								handleMainImageClicked={handleMainImageClicked}
+							/>
+							<ProductInformation 
+								productCounter={productCounter}
+								setProductCounter={setProductCounter}
+								handleBtnAddToCart={handleBtnAddToCart}
+							/>
+						</Route>
+						<Route exact path="/men">
+							<ComingSoon />
+						</Route>
+						<Route exact path="/women">
+							<ComingSoon />
+						</Route>
+						<Route exact path="/about">
+							<ComingSoon />
+						</Route>
+						<Route exact path="/contact">
+							<ComingSoon />
+						</Route>
+						<Route>
+							<NotFound />
+						</Route>
+					</Switch>
+				</main>
+				<div className="attribution">
+					Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>. 
+					Coded by <a href="https://webcodebynevyana.netlify.app/" target="_blank" rel="noreferrer">Nevyana Momchilova</a>.
+				</div>
+				{mainImageClicked && 
+				<Modal 
+					handleMainImageClicked={handleMainImageClicked}
+					activeImage={activeImage}
+					setActiveImage={setActiveImage}
+				/>}
+				<div className={navbarSideMode ? "navbar-side-mode-background" : "hidden"}></div>
+			</div>
+		</BrowserRouter>
+  	);
 }
 
 export default App;
